@@ -6,10 +6,11 @@ def matrix_transpose(A):
     """
     arr = np.asarray(A)
     rows , cols = arr.shape
-    ans = np.zeros((cols,rows))
-    for i in range(rows):
-        for j in range(cols):
-            ans[j][i] = arr[i][j]
-    return ans
+    # ans = np.zeros((cols,rows))
+    # for i in range(rows):
+    #     for j in range(cols):
+    #         ans[j][i] = arr[i][j]
+    j , i = np.indices((cols,rows))
+    return arr[i,j]
     
         
